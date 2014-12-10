@@ -242,7 +242,7 @@ var React = require('react');
 
 var HomePage = React.createClass({displayName: 'HomePage',
   render:function() {
-    return React.createElement("h2", null, "Material Components for React");
+    return React.createElement("h3", {className: "header"}, "Material design Components for React");
   }
 });
 
@@ -259,11 +259,15 @@ var Layout = React.createClass({displayName: 'Layout',
   render:function() {
     return (
       React.createElement("div", null, 
-        React.createElement(MainNav, null), 
-        React.createElement("main", {role: "main"}, 
+        React.createElement("div", {className: "container"}, 
+          React.createElement(MainNav, null)
+        ), 
+        React.createElement("main", {role: "main", className: "container"}, 
           React.createElement(RouteHandler, null)
         ), 
-        React.createElement(PageFooter, null)
+        React.createElement("div", {className: "container"}, 
+          React.createElement(PageFooter, null)
+        )
       )
     );
   }
@@ -294,7 +298,24 @@ var React = require('react');
 var PageFooter = React.createClass({displayName: 'PageFooter',
   render:function() {
     return (
-      React.createElement("footer", null, "© Isaiah")
+      React.createElement("footer", {className: "section"}, 
+        React.createElement("div", {className: "footer-block"}, 
+          React.createElement("iframe", {className: "github-btn", 
+            src: "http://ghbtns.com/github-btn.html?user=react-materialize&repo=react-materialize&type=watch&count=true", 
+            allowtransparency: "true", frameborder: "0", scrolling: "0", width: "110", height: "20"})
+        ), 
+        React.createElement("div", {className: "footer-block"}, 
+          React.createElement("iframe", {className: "github-btn", 
+            src: "http://ghbtns.com/github-btn.html?user=react-materialize&repo=react-materialize&type=fork&count=true", 
+            allowtransparency: "true", frameborder: "0", scrolling: "0", width: "95", height: "20"})
+        ), 
+        React.createElement("div", {className: "footer-block"}, 
+          React.createElement("a", {href: "https://github.com/react-materialize/react-materialize"}, "GitHub")
+        ), 
+        React.createElement("div", {className: "footer-block"}, 
+          "Code licensed under ", React.createElement("a", {href: "https://github.com/react-materialize/react-materialize/blob/master/LICENSE"}, "MIT")
+        )
+      )
     );
   }
 });
@@ -374,6 +395,7 @@ var Root = React.createClass({displayName: 'Root',
         '<meta http-equiv="X-UA-Compatible" content="IE=edge" />' +
         '<meta name="viewport" content="width=device-width, initial-scale=1.0" />' +
         '<link href="bower_components/materialize/bin/materialize.css" rel="stylesheet" type="text/css" media="screen"/>' +
+        '<link href="assets/docs.css" rel="stylesheet" type="text/css" media="screen"/>' +
         '<link href="bower_components/prismjs/prism.css" rel="stylesheet" type="text/css" media="screen"/>' +
         '<script src="bower_components/prismjs/prism.js"></script>'
     };
@@ -37649,13 +37671,13 @@ var Navbar = React.createClass({displayName: 'Navbar',
     return (
       React.createElement("nav", null, 
         React.createElement("div", {className: "nav-wrapper"}, 
-          React.createElement("a", {href: "#", className: cx(brandClasses)}, brand), 
-          React.createElement("ul", {className: joinClasses(className, cx(classes)), id: "nav-mobile"}, 
-            this.props.children
-          ), 
+          React.createElement("a", {href: "/", className: cx(brandClasses)}, brand), 
           React.createElement("a", {className: "button-collapse", href: "#", 
             'data-activates': "nav-mobile"}, 
             React.createElement("i", {className: "mdi-navigation-menu"})
+          ), 
+          React.createElement("ul", {className: joinClasses(className, cx(classes)), id: "nav-mobile"}, 
+            this.props.children
           )
         )
       )
