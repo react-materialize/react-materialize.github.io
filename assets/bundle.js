@@ -598,7 +598,7 @@
 	    _react2['default'].createElement(
 	        _reactRouter.Route,
 	        { path: '/', component: _srcLayout2['default'] },
-	        _react2['default'].createElement(IndexRoute, { component: _srcGettingStartedPage2['default'] }),
+	        _react2['default'].createElement(_reactRouter.IndexRoute, { component: _srcGettingStartedPage2['default'] }),
 	        _react2['default'].createElement(_reactRouter.Route, { path: 'index.html', component: _srcHomePage2['default'], name: 'home' }),
 	        _react2['default'].createElement(_reactRouter.Route, { path: 'get-started.html', component: _srcGettingStartedPage2['default'], name: 'gs' }),
 	        _react2['default'].createElement(_reactRouter.Route, { path: 'components.html', component: _srcComponentsPage2['default'], name: 'comp' })
