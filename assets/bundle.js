@@ -54,7 +54,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "ab6dec53c76e18ee03fc"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "806f7e78452f8f1ea876"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -29072,7 +29072,7 @@
 	'use strict';
 
 	Object.defineProperty(exports, '__esModule', {
-	  value: true
+	    value: true
 	});
 
 	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
@@ -29095,50 +29095,52 @@
 
 	var _Overlay3 = _interopRequireDefault(_Overlay2);
 
+	var _nodeUuid = __webpack_require__(257);
+
+	var _nodeUuid2 = _interopRequireDefault(_nodeUuid);
+
 	var OverlayTrigger = (function (_Overlay) {
-	  _inherits(OverlayTrigger, _Overlay);
+	    _inherits(OverlayTrigger, _Overlay);
 
-	  function OverlayTrigger(props) {
-	    _classCallCheck(this, OverlayTrigger);
+	    function OverlayTrigger(props) {
+	        _classCallCheck(this, OverlayTrigger);
 
-	    _get(Object.getPrototypeOf(OverlayTrigger.prototype), 'constructor', this).call(this, props);
-	    this.state = { isOverlayShown: false };
-	    this.toggle = this.toggle.bind(this);
-	    this.renderOverlay = this.renderOverlay.bind(this);
-	  }
-
-	  _createClass(OverlayTrigger, [{
-	    key: 'render',
-	    value: function render() {
-	      var _props = this.props;
-	      var overlay = _props.overlay;
-	      var children = _props.children;
-
-	      var props = _objectWithoutProperties(_props, ['overlay', 'children']);
-
-	      var child = _react2['default'].Children.only(children);
-	      return _react2['default'].cloneElement(child, { onClick: this.toggle });
+	        _get(Object.getPrototypeOf(OverlayTrigger.prototype), 'constructor', this).call(this, props);
+	        this.state = { isOverlayShown: false };
+	        this.showOverlay = this.showOverlay.bind(this);
+	        this.renderOverlay = this.renderOverlay.bind(this);
+	        this.overlayID = _nodeUuid2['default'].v1();
 	    }
-	  }, {
-	    key: 'renderOverlay',
-	    value: function renderOverlay() {
-	      if (!this.state.isOverlayShown) {
-	        return _react2['default'].createElement('span', null);
-	      }
-	      return _react2['default'].cloneElement(this.props.overlay, { onRequestHide: this.toggle });
-	    }
-	  }, {
-	    key: 'toggle',
-	    value: function toggle() {
-	      this.setState({ isOverlayShown: !this.state.isOverlayShown });
-	    }
-	  }]);
 
-	  return OverlayTrigger;
+	    _createClass(OverlayTrigger, [{
+	        key: 'render',
+	        value: function render() {
+	            var _props = this.props;
+	            var overlay = _props.overlay;
+	            var children = _props.children;
+
+	            var props = _objectWithoutProperties(_props, ['overlay', 'children']);
+
+	            var child = _react2['default'].Children.only(children);
+	            return _react2['default'].cloneElement(child, { onClick: this.showOverlay });
+	        }
+	    }, {
+	        key: 'renderOverlay',
+	        value: function renderOverlay() {
+	            return _react2['default'].cloneElement(this.props.overlay, { onRequestHide: this.toggle, id: this.overlayID });
+	        }
+	    }, {
+	        key: 'showOverlay',
+	        value: function showOverlay() {
+	            $("#" + this.overlayID).openModal();
+	        }
+	    }]);
+
+	    return OverlayTrigger;
 	})(_Overlay3['default']);
 
 	OverlayTrigger.propTypes = {
-	  overlay: _react2['default'].PropTypes.node
+	    overlay: _react2['default'].PropTypes.node
 	};
 
 	exports['default'] = OverlayTrigger;
@@ -29319,7 +29321,6 @@
 	    _classCallCheck(this, Modal);
 
 	    _get(Object.getPrototypeOf(Modal.prototype), 'constructor', this).call(this, props);
-	    this.handleBackdropClick = this.handleBackdropClick.bind(this);
 	  }
 
 	  _createClass(Modal, [{
@@ -29333,23 +29334,12 @@
 
 	      var props = _objectWithoutProperties(_props, ['header', 'children', 'fixedFooter', 'bottomSheet']);
 
-	      var style = {
-	        display: 'block',
-	        position: 'fixed',
-	        opacity: 1,
-	        zIndex: 1050
-	      };
-	      if (bottomSheet) {
-	        style["bottom"] = 0;
-	      } else {
-	        style["top"] = '10%';
-	      }
 	      var classes = { modal: true };
 	      classes['modal-fixed-footer'] = this.props.fixedFooter;
 	      classes['bottom-sheet'] = this.props.bottomSheet;
-	      var modal = _react2['default'].createElement(
+	      return _react2['default'].createElement(
 	        'div',
-	        _extends({ className: (0, _classnames2['default'])(classes) }, props, { style: style }),
+	        _extends({ className: (0, _classnames2['default'])(classes) }, props),
 	        _react2['default'].createElement(
 	          'div',
 	          { className: "modal-content" },
@@ -29369,33 +29359,11 @@
 	          { className: "modal-footer" },
 	          _react2['default'].createElement(
 	            _Button2['default'],
-	            { onClick: this.props.onRequestHide, waves: 'light', modal: 'close', flat: true },
+	            { waves: 'light', modal: 'close', flat: true },
 	            'Close'
 	          )
 	        )
 	      );
-	      var backdropStyle = {
-	        backgroundColor: '#000',
-	        top: 0,
-	        right: 0,
-	        bottom: 0,
-	        left: 0,
-	        zIndex: 1040,
-	        position: 'fixed',
-	        opacity: 0.5
-	      };
-	      return _react2['default'].createElement(
-	        'div',
-	        null,
-	        _react2['default'].createElement('div', { style: backdropStyle, onClick: this.handleBackdropClick }),
-	        modal
-	      );
-	    }
-	  }, {
-	    key: 'handleBackdropClick',
-	    value: function handleBackdropClick(e) {
-	      e.preventDefault();
-	      this.props.onRequestHide();
 	    }
 	  }]);
 
@@ -29404,8 +29372,7 @@
 
 	Modal.propTypes = {
 	  header: _react2['default'].PropTypes.string,
-	  fixedFooter: _react2['default'].PropTypes.bool,
-	  bottomSheet: _react2['default'].PropTypes.bool
+	  modalStyle: _react2['default'].PropTypes.oneOf(['fixedFooter', 'bottomSheet'])
 	};
 
 	exports['default'] = Modal;
