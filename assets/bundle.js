@@ -25842,14 +25842,14 @@
 	          'li',
 	          null,
 	          _react2.default.createElement('iframe', { className: 'github-btn',
-	            src: 'http://ghbtns.com/github-btn.html?user=react-materialize&repo=react-materialize&type=watch&count=true',
+	            src: 'https://ghbtns.com/github-btn.html?user=react-materialize&repo=react-materialize&type=watch&count=true',
 	            allowTransparency: 'true', frameBorder: '0', scrolling: '0', width: '110', height: '20' })
 	        ),
 	        _react2.default.createElement(
 	          'li',
 	          null,
 	          _react2.default.createElement('iframe', { className: 'github-btn',
-	            src: 'http://ghbtns.com/github-btn.html?user=react-materialize&repo=react-materialize&type=fork&count=true',
+	            src: 'https://ghbtns.com/github-btn.html?user=react-materialize&repo=react-materialize&type=fork&count=true',
 	            allowTransparency: 'true', frameBorder: '1', scrolling: '0', width: '95', height: '20' })
 	        ),
 	        _react2.default.createElement(
