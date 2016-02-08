@@ -25804,11 +25804,11 @@
 
 	var _PreloaderPage2 = _interopRequireDefault(_PreloaderPage);
 
-	var _TablesPage = __webpack_require__(309);
+	var _TablesPage = __webpack_require__(310);
 
 	var _TablesPage2 = _interopRequireDefault(_TablesPage);
 
-	var _TabsPage = __webpack_require__(311);
+	var _TabsPage = __webpack_require__(312);
 
 	var _TabsPage2 = _interopRequireDefault(_TabsPage);
 
@@ -26559,7 +26559,7 @@
 	  badgeNavbar: "import React from 'react';\nimport Badge from '../src/Badge';\nimport Navbar from '../src/Navbar';\nimport NavItem from '../src/NavItem';\n\nexport default\n<Navbar brand='logo' right>\n  <NavItem href='#!'>sass</NavItem>\n  <NavItem href='#!'>\n    sass <Badge newIcon>4</Badge>\n  </NavItem>\n  <NavItem href='#!'>sass</NavItem>\n</Navbar>;\n",
 	  breadcrumb: "import React from 'react';\n\nimport Breadcrumb from '../src/Breadcrumb';\nimport MenuItem from '../src/MenuItem';\n\nexport default\n<Breadcrumb>\n  <MenuItem>first</MenuItem>\n  <MenuItem>second</MenuItem>\n  <MenuItem>third</MenuItem>\n</Breadcrumb>;\n",
 	  cardImage: "import React from 'react';\nimport Card from '../src/Card';\nimport CardTitle from '../src/CardTitle';\n\nexport default\n<Card className='small'\n  header={<CardTitle image='assets/sample-1.jpg'>Card Title</CardTitle>}\n  actions={[<a href='#'>This is a Link</a>]}>\n  I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.\n</Card>;\n",
-	  cardPanel: "import React from 'react';\nimport CardPanel from '../src/CardPanel';\nimport Col from '../src/Col';\nimport Row from '../src/Row';\n\nexport default\n<Row>\n    <Col s={12} m={5}>\n        <CardPanel>\n            I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively. I am similar to what is called a panel in other frameworks.\n        </CardPanel>\n    </Col>\n    <Col s={12} m={7}>\n        For a simpler card with less markup, try using a card panel which just has padding and a shadow effect\n    </Col>\n</Row>;\n",
+	  cardPanel: "import React from 'react';\nimport CardPanel from '../src/CardPanel';\nimport Col from '../src/Col';\nimport Row from '../src/Row';\n\nexport default\n<Row>\n    <Col s={12} m={5}>\n        <CardPanel className=\"teal lighten-4 black-text\">\n            I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively. I am similar to what is called a panel in other frameworks.\n        </CardPanel>\n    </Col>\n    <Col s={12} m={7}>\n        For a simpler card with less markup, try using a card panel which just has padding and a shadow effect\n    </Col>\n</Row>;\n",
 	  cardReveal: "import React from 'react';\n\nimport Card from '../src/Card';\nimport CardTitle from '../src/CardTitle';\nimport Icon from '../src/Icon';\n\nexport default\n<Card header={<CardTitle reveal image={\"assets/office.jpg\"} waves='light'/>}\n    title=\"Card Title\"\n    reveal={<p>Here is some more information about this product that is only revealed once clicked on.</p>}>\n    <p><a href=\"#\">This is a link</a></p>\n</Card>;\n",
 	  cardSimple: "import React from 'react';\nimport Card from '../src/Card';\nimport Col from '../src/Col';\n\nexport default\n<Col m={6} s={12}>\n    <Card className='blue-grey darken-1' textClassName='white-text' title='Card title' actions={[<a href='#'>This is a link</a>]}>\n    I am a very simple card.\n    </Card>\n</Col>;\n",
 	  chips: "import React from 'react';\nimport Row from '../src/Row';\nimport Col from '../src/Col';\nimport Chip from '../src/Chip';\nimport Tag from '../src/Tag';\n\nexport default\n<Row>\n  <Col s={12}>\n    <Chip>\n      <image src='assets/yuna.jpg' alt='Contact Person' />\n      Jane Doe\n    </Chip>\n    <Tag>tag</Tag>\n  </Col>\n</Row>;\n",
@@ -26591,7 +26591,7 @@
 	  prefillingTextInput: "import React from 'react';\nimport Input from '../src/Input';\nimport Row from '../src/Row';\n\nexport default\n<Row>\n  <Input s={6} label=\"First Name\" validate defaultValue='Alvin' />\n</Row>;\n",
 	  preloaderCircular: "import React from 'react';\nimport Row from '../src/Row';\nimport Col from '../src/Col';\nimport Preloader from '../src/Preloader';\n\nexport default\n<Row>\n  <Col s={4}>\n    <Preloader size='big'/>\n  </Col>\n  <Col s={4}>\n    <Preloader flashing/>\n  </Col>\n  <Col s={4}>\n    <Preloader size='small'/>\n  </Col>\n</Row>;\n",
 	  progressBars: "import React from 'react';\nimport Row from '../src/Row';\nimport Col from '../src/Col';\nimport ProgressBar from '../src/ProgressBar';\n\nexport default\n<Row>\n  <Col s={12}>\n    <ProgressBar progress={70}/>\n  </Col>\n  <Col s={12}>\n    <ProgressBar />\n  </Col>\n</Row>;\n",
-	  raisedButton: "import React from 'react';\nimport Button from '../src/Button';\nimport Icon from '../src/Icon';\n\nexport default\n<div>\n    <Button node='a' waves='light'>button</Button>\n    <Button node='a' waves='light'>button<Icon left>cloud</Icon></Button>\n    <Button node='a' waves='light'>button<Icon right>cloud</Icon></Button>\n</div>;\n",
+	  raisedButton: "import React from 'react';\nimport Button from '../src/Button';\nimport Icon from '../src/Icon';\n\nexport default\n<div>\n    <Button waves='light'>button</Button>\n    <Button waves='light'>button<Icon left>cloud</Icon></Button>\n    <Button waves='light'>button<Icon right>cloud</Icon></Button>\n</div>;\n",
 	  rightAlignedNavbar: "import React from 'react';\nimport Navbar from '../src/Navbar';\nimport NavItem from '../src/NavItem';\n\nexport default\n<Navbar brand='logo' right>\n  <NavItem href='get-started.html'>Getting started</NavItem>\n  <NavItem href='components.html'>Components</NavItem>\n</Navbar>;\n",
 	  selectSimple: "import React from 'react';\nimport Input from '../src/Input';\nimport Row from '../src/Row';\n\nexport default\n<Row>\n  <Input s={12} type='select' label=\"Materialize Select\">\n    <option value='1'>Option 1</option>\n    <option value='2'>Option 2</option>\n    <option value='3'>Option 3</option>\n  </Input>\n</Row>;\n",
 	  sliders: "import React from 'react';\n\nimport Slide from '../src/Slide';\nimport Slider from '../src/Slider';\n\nexport default\n<Slider>\n  <Slide\n    src=\"http://lorempixel.com/580/250/nature/1\"\n    title=\"This is our big Tagline!\">\n    Here's our small slogan.\n  </Slide>\n  <Slide\n    src=\"http://lorempixel.com/580/250/nature/2\"\n    title=\"Left aligned Caption\"\n    placement=\"left\">\n    Here's our small slogan.\n  </Slide>\n  <Slide\n    src=\"http://lorempixel.com/580/250/nature/3\"\n    title=\"Right aligned Caption\"\n    placement=\"right\">\n    Here's our small slogan.\n  </Slide>\n</Slider>;\n",
@@ -27952,12 +27952,12 @@
 	    null,
 	    _react2.default.createElement(
 	        _Button2.default,
-	        { node: 'a', waves: 'light' },
+	        { waves: 'light' },
 	        'button'
 	    ),
 	    _react2.default.createElement(
 	        _Button2.default,
-	        { node: 'a', waves: 'light' },
+	        { waves: 'light' },
 	        'button',
 	        _react2.default.createElement(
 	            _Icon2.default,
@@ -27967,7 +27967,7 @@
 	    ),
 	    _react2.default.createElement(
 	        _Button2.default,
-	        { node: 'a', waves: 'light' },
+	        { waves: 'light' },
 	        'button',
 	        _react2.default.createElement(
 	            _Icon2.default,
@@ -28874,7 +28874,7 @@
 	        { s: 12, m: 5 },
 	        _react2.default.createElement(
 	            _CardPanel2.default,
-	            null,
+	            { className: 'teal lighten-4 black-text' },
 	            'I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively. I am similar to what is called a panel in other frameworks.'
 	        )
 	    ),
@@ -28890,8 +28890,6 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
@@ -28909,48 +28907,26 @@
 
 	function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	var CardPanel = function CardPanel(_ref) {
+	  var className = _ref.className;
+	  var children = _ref.children;
 
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	  var props = _objectWithoutProperties(_ref, ['className', 'children']);
 
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	  var classes = {
+	    'card-panel': true
+	  };
 
-	var CardPanel = function (_React$Component) {
-	  _inherits(CardPanel, _React$Component);
-
-	  function CardPanel() {
-	    _classCallCheck(this, CardPanel);
-
-	    return _possibleConstructorReturn(this, Object.getPrototypeOf(CardPanel).apply(this, arguments));
-	  }
-
-	  _createClass(CardPanel, [{
-	    key: 'render',
-	    value: function render() {
-	      var classes = {
-	        'card-panel': true,
-	        'teal': true
-	      };
-	      var _props = this.props;
-	      var className = _props.className;
-	      var children = _props.children;
-
-	      var props = _objectWithoutProperties(_props, ['className', 'children']);
-
-	      return _react2.default.createElement(
-	        'div',
-	        { className: (0, _classnames2.default)(classes, className) },
-	        _react2.default.createElement(
-	          'span',
-	          { className: 'white-text' },
-	          children
-	        )
-	      );
-	    }
-	  }]);
-
-	  return CardPanel;
-	}(_react2.default.Component);
+	  return _react2.default.createElement(
+	    'div',
+	    { className: (0, _classnames2.default)(classes, className) },
+	    _react2.default.createElement(
+	      'span',
+	      null,
+	      children
+	    )
+	  );
+	};
 
 	exports.default = CardPanel;
 
@@ -32738,7 +32714,7 @@
 
 	var _PreloaderCircular2 = _interopRequireDefault(_PreloaderCircular);
 
-	var _ProgressBars = __webpack_require__(307);
+	var _ProgressBars = __webpack_require__(308);
 
 	var _ProgressBars2 = _interopRequireDefault(_ProgressBars);
 
@@ -32890,6 +32866,10 @@
 
 	var _classnames2 = _interopRequireDefault(_classnames);
 
+	var _Spinner = __webpack_require__(307);
+
+	var _Spinner2 = _interopRequireDefault(_Spinner);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -32897,43 +32877,6 @@
 	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var Spinner = function Spinner(props) {
-	  var color = props.color;
-	  var only = props.only;
-
-	  var spinnerClasses = {
-	    'spinner-layer': true
-	  };
-	  if (only) {
-	    spinnerClasses['spinner-' + color + '-only'] = true;
-	  } else {
-	    spinnerClasses['spinner-' + color] = true;
-	  }
-	  return _react2.default.createElement(
-	    'div',
-	    { className: (0, _classnames2.default)(spinnerClasses) },
-	    _react2.default.createElement(
-	      'div',
-	      { className: 'circle-clipper left' },
-	      _react2.default.createElement('div', { className: 'circle' })
-	    ),
-	    _react2.default.createElement(
-	      'div',
-	      { className: 'gap-patch' },
-	      _react2.default.createElement('div', { className: 'circle' })
-	    ),
-	    _react2.default.createElement(
-	      'div',
-	      { className: 'circle-clipper right' },
-	      _react2.default.createElement('div', { className: 'circle' })
-	    )
-	  );
-	};
-
-	Spinner.defaultProps = {
-	  only: true
-	};
 
 	var colors = ['blue', 'red', 'yellow', 'green'];
 
@@ -32962,10 +32905,10 @@
 	      if (this.props.flashing) {
 	        spinners = [];
 	        colors.map(function (color) {
-	          spinners.push(_react2.default.createElement(Spinner, { color: color, only: false, key: color }));
+	          spinners.push(_react2.default.createElement(_Spinner2.default, { color: color, only: false, key: color }));
 	        });
 	      } else {
-	        spinners = _react2.default.createElement(Spinner, { color: this.props.color });
+	        spinners = _react2.default.createElement(_Spinner2.default, { color: this.props.color });
 	      }
 	      return _react2.default.createElement(
 	        'div',
@@ -33023,6 +32966,65 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
+	var _classnames = __webpack_require__(210);
+
+	var _classnames2 = _interopRequireDefault(_classnames);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var Spinner = function Spinner(_ref) {
+	  var color = _ref.color;
+	  var only = _ref.only;
+
+	  var spinnerClasses = {
+	    'spinner-layer': true
+	  };
+	  if (only) {
+	    spinnerClasses['spinner-' + color + '-only'] = true;
+	  } else {
+	    spinnerClasses['spinner-' + color] = true;
+	  }
+	  return _react2.default.createElement(
+	    'div',
+	    { className: (0, _classnames2.default)(spinnerClasses) },
+	    _react2.default.createElement(
+	      'div',
+	      { className: 'circle-clipper left' },
+	      _react2.default.createElement('div', { className: 'circle' })
+	    ),
+	    _react2.default.createElement(
+	      'div',
+	      { className: 'gap-patch' },
+	      _react2.default.createElement('div', { className: 'circle' })
+	    ),
+	    _react2.default.createElement(
+	      'div',
+	      { className: 'circle-clipper right' },
+	      _react2.default.createElement('div', { className: 'circle' })
+	    )
+	  );
+	};
+
+	Spinner.defaultProps = {
+	  only: true
+	};
+
+	exports.default = Spinner;
+
+/***/ },
+/* 308 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
 	var _Row = __webpack_require__(219);
 
 	var _Row2 = _interopRequireDefault(_Row);
@@ -33031,7 +33033,7 @@
 
 	var _Col2 = _interopRequireDefault(_Col);
 
-	var _ProgressBar = __webpack_require__(308);
+	var _ProgressBar = __webpack_require__(309);
 
 	var _ProgressBar2 = _interopRequireDefault(_ProgressBar);
 
@@ -33053,7 +33055,7 @@
 	);
 
 /***/ },
-/* 308 */
+/* 309 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -33126,7 +33128,7 @@
 	exports.default = ProgressBar;
 
 /***/ },
-/* 309 */
+/* 310 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -33165,7 +33167,7 @@
 
 	var _Samples2 = _interopRequireDefault(_Samples);
 
-	var _BorderlessTable = __webpack_require__(310);
+	var _BorderlessTable = __webpack_require__(311);
 
 	var _BorderlessTable2 = _interopRequireDefault(_BorderlessTable);
 
@@ -33237,7 +33239,7 @@
 	exports.default = TablesPage;
 
 /***/ },
-/* 310 */
+/* 311 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -33346,7 +33348,7 @@
 	);
 
 /***/ },
-/* 311 */
+/* 312 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -33385,7 +33387,7 @@
 
 	var _Samples2 = _interopRequireDefault(_Samples);
 
-	var _Tab = __webpack_require__(312);
+	var _Tab = __webpack_require__(313);
 
 	var _Tab2 = _interopRequireDefault(_Tab);
 
@@ -33450,7 +33452,7 @@
 	exports.default = TabsPage;
 
 /***/ },
-/* 312 */
+/* 313 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -33463,11 +33465,11 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _Tabs = __webpack_require__(313);
+	var _Tabs = __webpack_require__(314);
 
 	var _Tabs2 = _interopRequireDefault(_Tabs);
 
-	var _Tab = __webpack_require__(314);
+	var _Tab = __webpack_require__(315);
 
 	var _Tab2 = _interopRequireDefault(_Tab);
 
@@ -33499,7 +33501,7 @@
 	);
 
 /***/ },
-/* 313 */
+/* 314 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -33610,7 +33612,7 @@
 	exports.default = Tabs;
 
 /***/ },
-/* 314 */
+/* 315 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
