@@ -5,7 +5,7 @@ nav, footer.page-footer,
 .side-nav.fixed .collapsible-body li.active,
 .side-nav .collapsible-body>ul:not(.collapsible)>li.active,
 .side-nav.fixed .collapsible-body>ul:not(.collapsible)>li.active {
-  background-color: #38435a;
+  background-color: #38435a !important;
 }
 
 #index-banner {
